@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/styles.css') }}">
+  </head>
+  <body>
+    <section class="bac">
+      <div class="row">
+        <div class="col-lg-2">
+          <img src="{{ url_for('static', filename='images/lawyerloginphoto.png') }}" class="img-fluid mt-3 jimjam" alt="Responsive image">
+        </div>
+        <div class=" d-flex col-lg-8 justify-content-center">
+          <h1 class="justify-content-center display-2"> <strong>WELCOME {{name}}</strong></h1>
+        </div>
+        <div class="col-lg-2">
+          <img src="{{ url_for('static', filename='images/lawyerloginphoto.png') }}" class="img-fluid mt-3 jimjam" alt="Responsive image">
+        </div>
+
+      </div>
+
+<div class="mt-2 pt-2 d-flex justify-content-between flex-row bg-secondary">
+<div class="p-2"><h5 class="text-white"><a href="{{url_for('lawyer',person_id=id)}}">PROFILE</a></h5></div>
+<div class="verticalLine"></div>
+<div class="p-2"><h5 class="text-white"><a href="{{url_for('lawyercases',person_id=id)}}">CASES</a></h5></div>
+  <div class="verticalLine"></div>
+  <div class="p-2"><h5 class="text-white"><a href="{{url_for('lawyerupload',person_id=id)}}">UPLOAD DOCUMENT</a></h5></div>
+  <div class="verticalLine"></div>
+  <div class="p-2"><h5 class="text-white"><a href="{{url_for('compete',person_id=id)}}">COMPETE</a></h5></div>
+  <div class="verticalLine"></div>
+  <div class="p-2"><h5 class="text-white"><a href="{{url_for('lawyerschedule',person_id=id)}}">HEARNING SCHEDULE</a></h5></div>
+  <div class="verticalLine"></div>
+  <div class="p-2"><h5 class="text-white"><a href="{{url_for('login')}}">LogOut</a></h5></div>
+
+
+</div>
+
+<div class="mt-3 pt-3 row">
+  <div class="col lg-6">
+    <h4>Personal Info</h4>
+    <ul class="list-group">
+      {% for row in person_details %}
+        <li class="list-group-item">     Person_Id - {{row[0]}} </li>
+        <li class="list-group-item">     Name - {{ row[1] }} {{ row[2] }} </li>
+        <li class="list-group-item">     Phone no. - {{ row[3] }} </li>
+        <li class="list-group-item">     Gender - {{ row[4] }} </li>
+        <li class="list-group-item">     Email - {{ row[5] }} </li>
+        <li class="list-group-item">     City - {{ row[6] }} </li>
+        <li class="list-group-item">     State - {{ row[7] }} </li>
+      {% endfor %}
+    </ul>
+ 
+
+  </div>
+  <div class="col lg-6">
+        <h4>Professional Info</h4>
+        <ul class="list-group">
+      {% for row in person_stats %}
+        <li class="list-group-item">     Bar_Council_Number - {{row[0]}} </li>
+        <li class="list-group-item">     Wins - {{ row[1] }} </li>
+        <li class="list-group-item">     Loss - {{ row[2] }} </li>
+        <li class="list-group-item">     Active Cases - {{ row[3] }} </li>
+        <li class="list-group-item">     Category - {{ row[4] }} </li>
+      {% endfor %}
+    </ul>
+ 
+      
+  </div>
+
+  </div>
+
+
+    </section>
+
+<!-- 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="index.js" charset="utf-8"> </script>
+ -->
+  </body>
+</html>

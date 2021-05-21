@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{css}}">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+     <img src="{{image2}}" alt="" width="30" height="30" class="d-inline-block align-text-top">
+   JIM n JAM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('login')}}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="aboutus-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-6 col-xs-12">
+        <div class="aboutus-content">
+          <h1>About us</h1>
+          <h4>Important Details</h4>
+          <p>
+          <b><i>
+          Judicial Automation is the primary need of Courts today which are overloaded with Cases and need a tool to Automate their working. 
+          Over 3 crore cases are pending in the courts. Shocking huh...Imagine the number of cases that have already gone by.Total number of judges as per report are 17000. Just by dividing the figures one can get the idea of the burden of court cases on the judges and on the system. 
+          The court proceedings are documented for official records, references and study. But does somebody want to go through millions of records just to find A FILE. 
+          I think this is where we come into the picture. How about designing a database which could manage all of the workload. But what's included…
+          <br>
+          <hr>
+          A lawyer database and their win/loss ratio,their field of study
+          <br>
+          A judge pending case history
+          <br>
+          Current cases history
+          <br>
+          Police Officer appointment and duty to the case
+          <br> 
+          List and link of important records related to case
+          <br>
+          <hr>
+          </i>
+          
+          Important Note
+          <br>
+          The database will ensure that the document access is restricted well within the abiding laws and access will be given to the required statutory of the government.
+          </b>  
+          </p>
+          <div class="counter ">
+
+            <div class="single-counter text-center">
+              <h2 class="counter">{{active}}</h2>
+              <p>Active Cases</p>
+            </div>
+
+            <div class="single-counter text-center">
+              <h2 class="counter">{{completed}}</h2>
+              <p>Closed Cases</p>
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+
+       
+      <div class="col-md-4 col-sm-6 col-xs-12 ms-5">
+        <div class="aboutus-image float-left hidden-sm"><img src="{{image1}}" alt=""></div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="col-md-4 col-sm-6 col-xs-12 ms-5">
+            <img src="{{image3}}">
+          </div>
+        </div>
+        <div class="column">
+          <div class="col-md-4 col-sm-6 col-xs-12 ms-5">
+            <img src="{{image4}}">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
