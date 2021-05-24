@@ -153,7 +153,7 @@ e) The Government Can establish a new Court in the database
 
 ## Entity Relationship Diagram
 
-![ER DIAGRAM](ER.png?raw=true)
+![ER DIAGRAM](images/ER.png?raw=true)
 
 
 
