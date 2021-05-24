@@ -156,6 +156,12 @@ e) The Government Can establish a new Court in the database
 ![ER DIAGRAM](images/ER.png?raw=true)
 
 
+## Data Population
+
+![Table 1](images/img1.png?raw=true)
+![Table 2](images/img2.png?raw=true)
+![Table 3](images/img3.png?raw=true)
+
 
 
 
