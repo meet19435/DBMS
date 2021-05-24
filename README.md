@@ -151,5 +151,13 @@ d) The Government can add a new case.
 
 e) The Government Can establish a new Court in the database
 
+## Entity Relationship Diagram
+
+![Alt text](images/er.png?raw=true)
+
+
+
+
+
 
 
