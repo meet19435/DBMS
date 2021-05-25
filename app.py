@@ -63,20 +63,21 @@ def lawyer(person_id):
 	query='select * from person where person_id = ' + str(person_id)
 	query1='select T4.bar_council_number, T4.wins, T4.loss, T4.activecases,T3.category from (select T1.bar_council_number, T1.Category from lawyer as t1, person as t2 where t1.person_id = t2.person_id and t2.person_id = '+str(person_id)+') as T3, lawyer_stats as T4 where T3.bar_council_number=T4.bar_council_number'
 	query=query.lower()
-	query1=query.lower()
+	query1=query1.lower()
 	cursor.execute(query)
-	person_details = " "
-	person_stats=""
-	for x in cursor:
-		person_details=x
-	cursor.execute(query1)
-	for x in cursor:
-		person_stats=x
-	name=person_details[1]
 	arr=[]
-	arr.insert(0,person_details)
+	for x in cursor:
+		arr.append(x)
+	database.close()
+	database = Connect()
+	cursor = database.cursor()
+	cursor.execute(query1)
 	arr1=[]
-	arr1.insert(0,person_stats)
+	for x in cursor:
+		print(x)
+		arr1.append(x)
+	print(arr1)
+	name=arr[0][1]
 	database.close()
 	return render_template('lawyer.html',name=name,person_details=arr,person_stats=arr1,id=person_id)
 
