@@ -162,6 +162,32 @@ e) The Government Can establish a new Court in the database
 ![Table 2](images/img2.png?raw=true)
 ![Table 3](images/img3.png?raw=true)
 
+## WEB APP
+
+#### Home/About Page
+
+
+![Home Page](images/web1.png?raw=true)
+![Home Page](images/web2.png?raw=true)
+
+
+#### Interface for a lawyer
+
+###### Profile
+![Lawyer Interface](images/web3.png?raw=true)
+
+###### Case(Active+Completed)
+![Lawyer Interface](images/web4.png?raw=true)
+
+###### Rank
+![Lawyer Interface](images/web5.png?raw=true)
+
+###### Schedule within mentioned number of days
+![Lawyer Interface](images/web6.png?raw=true)
+
+
+
+
 
 
 
